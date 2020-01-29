@@ -51,6 +51,7 @@ def tistory_auth():
     res = session.get(host, params=params)
     try:
         token =  res.url.split('access_token=')[1].split('&')[0]
+        return token
     except:
         print "메일함에서 로그인 인증을 해주세요"
         sys.exit()
